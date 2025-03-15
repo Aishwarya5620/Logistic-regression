@@ -1,48 +1,38 @@
-# Logistic Regression Streamlit App
+# logisticregression
 
-This is a web-based application that allows users to upload a dataset, train a logistic regression model, visualize results, and make predictions using **Streamlit**.
+This Streamlit application performs a Logistic Regression analysis on the Titanic dataset to predict passenger survival. Here's a summary:
 
-## Features
-- Upload a CSV file for model training
-- Train a Logistic Regression model
-- Display model accuracy and confusion matrix
-- Predict outcomes based on user input
+Data Loading and Exploration:
 
-## Installation
-To run this project locally, follow these steps:
+Loads Titanic training and test datasets.
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-```
+Displays dataset shapes, previews, and missing values using a heatmap.
 
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+Data Preprocessing:
 
-### 3. Run the App
-```bash
-streamlit run streamlit_logistic.py
-```
+Drops rows with missing values.
 
-## Deploy on Streamlit Cloud
-1. Push the code to a GitHub repository.
-2. Go to [Streamlit Cloud](https://share.streamlit.io/) and deploy your app.
-3. Select the repository and branch, then set `streamlit_logistic.py` as the main script.
+Converts categorical features (Sex and Embarked) into numerical values.
 
-## Requirements
-- Python 3.x
-- Streamlit
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
+Splits data into training and testing sets.
 
-## License
-This project is open-source and available under the MIT License.
+Model Training:
 
-## Author
-Aishwarya P
+Uses Logistic Regression to train the model.
+
+Evaluates the model using accuracy and a classification report.
+
+User Interaction:
+
+Allows users to input passenger details (e.g., Pclass, Sex, Age, etc.) via a sidebar.
+
+Preprocesses user input to match the training data format.
+
+Prediction:
+
+Predicts survival based on user input and displays the result (Survived or Not Survived).
+
+Shows prediction probabilities for both classes.
+
+This app is a simple yet effective tool for exploring the Titanic dataset and performing survival predictions using logistic regression.
 
